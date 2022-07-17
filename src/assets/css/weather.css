@@ -1,0 +1,197 @@
+.weather {
+    position: relative;
+    width: calc(100% - 20px);
+    height: 180px;
+    background-color: black;
+    margin-left: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.weather::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .2;
+}
+
+.weather_1 {
+    background-image: url("../img/weather_1.jpg");
+    background-size: cover;
+}
+
+.weather_2 {
+    background: url("../img/weather_2.jpg");
+    background-size: cover;
+}
+
+.weather_3 {
+    background: url("../img/weather_3.jpg");
+    background-size: cover;
+}
+
+/*Первая колонка*/
+
+.weather__col_1 {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weather__city {
+    position: relative;
+    margin: 8px;
+    padding: 5px;
+    width: 105px;
+    height: 40px;
+
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+    box-shadow: #363636 0 0 5px;
+    backdrop-filter: blur(1px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 500;
+    color: white;
+}
+
+.weather__city img {
+    width: 20px;
+    height: 20px;
+}
+
+.weather__city_select {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.weather__city_select option {
+    color: black;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.weather__status img {
+    width: 60px;
+    height: 60px;
+}
+
+.weather__status_text {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding: 0 5px 5px 5px;
+
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*Вторая колонка*/
+
+.weather__col_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    max-height: 180px;
+    box-sizing: border-box;
+}
+
+.temp__now {
+    font-size: 42pt;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    position: relative;
+}
+
+.temp__now::after {
+    content: "o";
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+}
+
+.temp__between {
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+
+.temp__between::after {
+    content: "o";
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+}
+
+.weather__wind {
+    color: white;
+    font-size: 14px;
+    max-width: 200px;
+    text-align: center;
+    white-space: nowrap;
+    padding-bottom: 5px;
+}
+
+/*Третья колонка*/
+
+.weather__col_3 {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 55px;
+}
+
+.temp__status {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.temp__status_yellow {
+    background-color: rgba(255, 214, 51, 0.7);
+}
+
+.temp__status_red {
+    background-color: rgba(255, 96, 0, 0.7);
+}
+
+.temp__status_blue {
+    background-color: rgba(51, 184, 255, 0.7);
+}
+
+.weather__day {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.dateTime {
+    color: white;
+    margin: 5px;
+}
+
+.tomorrow__text {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
